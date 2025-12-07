@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter a Michaela – Svadba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero" id="uvod">
+    <div class="overlay"></div>
+    <nav class="nav">
+        <div class="logo">Peter &amp; Michaela</div>
+        <ul class="menu">
+            <li><a href="#program">Program</a></li>
+            <li><a href="#miesto">Miesto</a></li>
+            <li><a href="#rsvp">Potvrdzenie účasti</a></li>
+            <li><a href="#darceky">Darčeky</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-content">
+        <p class="date">26. september 2025</p>
+        <h1>Peter &amp; Michaela</h1>
+        <p class="subtitle">S radosťou vás pozývame osláviť náš svadobný deň.</p>
+
+        <div class="countdown" id="countdown">
+            <div class="unit">
+                <span id="days">00</span>
+                <small>dní</small>
+            </div>
+            <div class="unit">
+                <span id="hours">00</span>
+                <small>hodín</small>
+            </div>
+            <div class="unit">
+                <span id="minutes">00</span>
+                <small>minút</small>
+            </div>
+            <div class="unit">
+                <span id="seconds">00</span>
+                <small>sekúnd</small>
+            </div>
+        </div>
+
+        <a href="#program" class="btn">Zobraziť detaily</a>
+    </div>
+</header>
+
+<main>
+
+<section id="program" class="section">
+    <h2>Program dňa</h2>
+    <div class="timeline">
+        <div class="time-item">
+            <div class="time">14:30</div>
+            <div class="desc">Príchod hostí do kostola</div>
+        </div>
+        <div class="time-item">
+            <div class="time">15:00</div>
+            <div class="desc">Svadobný obrad – Ref. kostol Tušice</div>
+        </div>
+        <div class="time-item">
+            <div class="time">17:00</div>
+            <div class="desc">Svadobná hostina (doplníme miesto)</div>
+        </div>
+        <div class="time-item">
+            <div class="time">20:00</div>
+            <div class="desc">Prvý tanec a zábava</div>
+        </div>
+    </div>
+    <p class="note">Presný program ešte upresníme, sledujte prosím túto stránku.</p>
+</section>
+
+<section id="miesto" class="section section-alt">
+    <h2>Miesto</h2>
+    <div class="grid-2">
+        <div>
+            <h3>Obrad</h3>
+            <p><strong>Ref. kostol Tušice</strong></p>
+            <p>Tušice, Slovensko</p>
+            <p><a href="https://maps.google.com" target="_blank" rel="noopener">Zobraziť na mape</a></p>
+
+            <h3>Hostina</h3>
+            <p><strong>(doplníme názov sály/reštaurácie)</strong></p>
+            <p><a href="#" target="_blank" rel="noopener">Zobraziť na mape</a></p>
+        </div>
+        <div>
+            <h3>Doprava a parkovanie</h3>
+            <ul>
+                <li>Parkovanie pri kostole: (doplníme informácie).</li>
+                <li>Parkovanie pri sále: (doplníme parkovisko / možnosti).</li>
+                <li>Prípadný svadobný autobus: čas a miesto odchodu.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="rsvp" class="section">
+    <h2>Potvrdenie účasti (RSVP)</h2>
+    <p>
+        Prosíme vás, aby ste nám dali vedieť, či sa svadby zúčastníte,
+        najneskôr do <strong>31. júla 2025</strong>.
+    </p>
+
+    <!-- 1. možnosť: vlastný formulár – zatiaľ len šablóna -->
+    <form class="rsvp-form">
+        <div class="form-row">
+            <label>Meno a priezvisko</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-row">
+            <label>E-mail</label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="form-row">
+            <label>Zúčastníte sa?</label>
+            <select name="attending" required>
+                <option value="">Vyberte možnosť</option>
+                <option value="yes">Áno, prídem</option>
+                <option value="no">Žiaľ, nemôžem prísť</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label>Počet osôb (vrátane vás)</label>
+            <input type="number" name="guests" min="1" max="10" value="1">
+        </div>
+        <div class="form-row">
+            <label>Strava / alergie</label>
+            <textarea name="food" rows="3" placeholder="Napr. vegetarián, bezlepková, alergie..."></textarea>
+        </div>
+        <div class="form-row">
+            <label>Ďalšie poznámky</label>
+            <textarea name="message" rows="3"></textarea>
+        </div>
+        <p class="form-note">
+            Momentálne je formulár len ukážkový (bez odosielania). Neskôr ho prepojíme
+            s Google Forms alebo Google Sheets.
+        </p>
+        <button type="button" class="btn btn-disabled">Odoslanie bude čoskoro dostupné</button>
+    </form>
+
+    <!-- 2. možnosť: neskôr môžeme vložiť sem Google Form cez <iframe> -->
+</section>
+
+<section id="darceky" class="section section-alt">
+    <h2>Darčeky</h2>
+    <p>
+        Vaša prítomnosť je pre nás najväčším darom.
+        Ak by ste nás chceli potešiť aj inak, budeme vďační za
+        <strong>finančný príspevok</strong> na spoločné bývanie a budúce plány.
+    </p>
+    <p>
+        Bankový účet: <strong>SK00 0000 0000 0000 0000 0000</strong>  
+        Do poznámky môžete uviesť napr. „svadba Peter &amp; Michaela“.
+    </p>
+</section>
+
+<section id="info" class="section">
+    <h2>Praktické informácie</h2>
+    <div class="grid-2">
+        <div>
+            <h3>Oblečenie</h3>
+            <p>Prosíme o spoločenské oblečenie. Dámy šaty, páni oblek/košeľa a nohavice.</p>
+        </div>
+        <div>
+            <h3>Deti</h3>
+            <p>(Sem dopíšte, či sú deti vítané / alebo prosba bez detí.)</p>
+        </div>
+        <div>
+            <h3>Fotenie</h3>
+            <p>Fotograf bude prítomný celý deň. Prosíme počas obradu
+               nefotiť mobilmi, aby sme si chvíľu užili naplno.</p>
+        </div>
+        <div>
+            <h3>Ubytovanie</h3>
+            <p>(Ak budú odporúčané hotely/penzióny, môžeme sem doplniť prehľad.)</p>
+        </div>
+    </div>
+</section>
+
+<section id="kontakt" class="section section-alt">
+    <h2>Kontakty</h2>
+    <p>
+        Ak máte otázky ohľadom organizácie, prosíme kontaktujte:
+    </p>
+    <ul>
+        <li>Svedok: <strong>(meno)</strong> – tel.: <strong>+421 xxx xxx xxx</strong></li>
+        <li>Svedkyňa: <strong>(meno)</strong> – tel.: <strong>+421 xxx xxx xxx</strong></li>
+    </ul>
+    <p>
+        V prípade potreby sa môžete obrátiť aj na nás:<br>
+        Peter: +421 xxx xxx xxx<br>
+        Michaela: +421 xxx xxx xxx
+    </p>
+</section>
+
+</main>
+
+<footer class="footer">
+    &copy; 2025 Peter &amp; Michaela
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
