@@ -1,3 +1,17 @@
+:root {
+    --font-serif: "Playfair Display", serif;
+    --font-body: "Lora", serif;
+    --font-script: "Great Vibes", cursive;
+
+    --color-bg: #f7f4f1;
+    --color-bg-alt: #f0ebe7;
+    --color-accent: #b27b5c;
+    --color-accent-soft: #f4e1d4;
+    --color-text: #333333;
+}
+
+/* Reset */
+
 *,
 *::before,
 *::after {
@@ -6,13 +20,13 @@
 
 body {
     margin: 0;
-    font-family: "Georgia", "Times New Roman", serif;
-    background-color: #f7f4f1;
-    color: #333;
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 a {
-    color: #b27b5c;
+    color: var(--color-accent);
     text-decoration: none;
 }
 
@@ -20,20 +34,29 @@ a:hover {
     text-decoration: underline;
 }
 
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    letter-spacing: 0.5px;
+}
+
+/* Hero */
+
 .hero {
     position: relative;
     min-height: 90vh;
     background-image: url('https://images.pexels.com/photos/265779/pexels-photo-265779.jpeg?auto=compress&cs=tinysrgb&w=1600');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #ffffff;
 }
 
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.38);
 }
+
+/* Navigácia */
 
 .nav {
     position: relative;
@@ -45,8 +68,10 @@ a:hover {
 }
 
 .logo {
-    font-weight: bold;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 .menu {
@@ -58,9 +83,11 @@ a:hover {
 }
 
 .menu a {
-    color: #fff;
+    color: #ffffff;
     font-size: 0.95rem;
 }
+
+/* Obsah hero */
 
 .hero-content {
     position: relative;
@@ -72,8 +99,16 @@ a:hover {
     padding: 6rem 1rem 4rem;
 }
 
+.date {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
 .hero h1 {
-    font-size: 3rem;
+    font-family: var(--font-script);
+    font-size: 4rem;
     margin: 0.5rem 0;
 }
 
@@ -82,11 +117,7 @@ a:hover {
     max-width: 480px;
 }
 
-.date {
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.8rem;
-}
+/* Countdown */
 
 .countdown {
     display: flex;
@@ -104,26 +135,29 @@ a:hover {
     font-weight: bold;
 }
 
+.countdown small {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* Tlačidlá */
+
 .btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
     border-radius: 999px;
-    background-color: #f4e1d4;
-    color: #333;
+    background-color: var(--color-accent-soft);
+    color: var(--color-text);
     font-size: 0.95rem;
     border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     background-color: #e9d3c2;
 }
 
-.btn-disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-/* Sections */
+/* Sekcie */
 
 .section {
     padding: 4rem 1.5rem;
@@ -132,7 +166,7 @@ a:hover {
 }
 
 .section-alt {
-    background-color: #f0ebe7;
+    background-color: var(--color-bg-alt);
 }
 
 .section h2 {
@@ -156,13 +190,17 @@ a:hover {
 
 .time {
     font-weight: bold;
-    color: #b27b5c;
+    color: var(--color-accent);
+}
+
+.desc {
+    font-size: 0.95rem;
 }
 
 .note {
     text-align: center;
     font-size: 0.9rem;
-    color: #666;
+    color: #666666;
 }
 
 /* Grid */
@@ -173,8 +211,21 @@ a:hover {
     gap: 2rem;
 }
 
-/* RSVP */
+/* RSVP – Google Form */
 
+.rsvp-embed {
+    max-width: 760px;
+    margin: 2rem auto 0;
+}
+
+.rsvp-embed iframe {
+    width: 100%;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* (Ponechané – ak by si niekedy chcel vlastný formulár)
 .rsvp-form {
     max-width: 600px;
     margin: 0 auto;
@@ -215,6 +266,7 @@ textarea {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
+*/
 
 /* Footer */
 
@@ -225,15 +277,19 @@ textarea {
     background-color: #e6ded7;
 }
 
-/* Responsive */
+/* Responsívne */
 
 @media (max-width: 768px) {
     .menu {
-        display: none; /* pre jednoduchú verziu skryjeme menu na mobile */
+        display: none; /* jednoduchá verzia – skryté menu na mobile */
+    }
+
+    .hero {
+        min-height: 80vh;
     }
 
     .hero h1 {
-        font-size: 2.3rem;
+        font-size: 3rem;
     }
 
     .countdown {
@@ -244,7 +300,25 @@ textarea {
         grid-template-columns: 1fr;
     }
 
-    .rsvp-form {
-        padding: 1.5rem;
+    .section {
+        padding: 3rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding-top: 5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .countdown span {
+        font-size: 1.3rem;
     }
 }
