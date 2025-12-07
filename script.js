@@ -1,5 +1,6 @@
-// Countdown – svadba 26.9.2025 15:00
-const weddingDate = new Date("2025-09-26T15:00:00+02:00").getTime();
+// Countdown – svadba 14.8.2026 15:00
+const weddingDate = new Date("2026-08-14T15:00:00+02:00").getTime();
+
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -32,7 +33,7 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// hladké scrollovanie (ak ho browser podporuje, stačí CSS, toto je len doplnok)
+// Hladké scrollovanie
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         const targetId = this.getAttribute("href").substring(1);
