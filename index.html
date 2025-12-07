@@ -16,31 +16,32 @@
 <header class="hero" id="uvod">
     <div class="overlay"></div>
 
-<nav class="nav">
-    <div class="logo">Lukáš &amp; Danielka</div>
+    <nav class="nav">
+        <div class="logo">Lukáš &amp; Danielka</div>
 
-    <!-- Tlačidlo pre mobilné menu -->
-    <button class="nav-toggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+        <!-- Mobilné menu tlačidlo -->
+        <button class="nav-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <ul class="menu">
-        <li><a href="#program">Program</a></li>
-        <li><a href="#miesto">Miesto</a></li>
-        <li><a href="#rsvp">Potvrdenie účasti</a></li>
-        <li><a href="#darceky">Darčeky</a></li>
-        <li><a href="#info">Info</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-</nav>
-
+        <ul class="menu">
+            <li><a href="#program">Program</a></li>
+            <li><a href="#miesto">Miesto</a></li>
+            <li><a href="#rsvp">Potvrdenie účasti</a></li>
+            <li><a href="#darceky">Darčeky</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
 
     <div class="hero-content">
         <p class="date">14. august 2026</p>
         <h1>Lukáš &amp; Danielka</h1>
-        <p class="subtitle">S radosťou vás pozývame osláviť náš svadobný deň.</p>
+        <p class="subtitle">
+            S radosťou vás pozývame osláviť náš svadobný deň v kruhu rodiny a priateľov.
+        </p>
 
         <div class="countdown" id="countdown">
             <div class="unit">
@@ -67,57 +68,82 @@
 
 <main>
 
+    <!-- PROGRAM DŇA -->
     <section id="program" class="section">
         <h2>Program dňa</h2>
         <div class="timeline">
             <div class="time-item">
-                <div class="time">14:30</div>
+                <div class="time">14:00</div>
                 <div class="desc">Príchod hostí do kostola</div>
             </div>
             <div class="time-item">
-                <div class="time">15:00</div>
-                <div class="desc">Svadobný obrad – Reformovaný kostol Tušice</div>
+                <div class="time">14:30</div>
+                <div class="desc">Svadobný obrad – Saleziáni, Michalovce</div>
+            </div>
+            <div class="time-item">
+                <div class="time">16:30</div>
+                <div class="desc">Privítanie hostí – Hotel Glamour, Zemplínska Šírava</div>
             </div>
             <div class="time-item">
                 <div class="time">17:00</div>
-                <div class="desc">Svadobná hostina (doplníme miesto)</div>
+                <div class="desc">Slávnostná večera</div>
             </div>
             <div class="time-item">
                 <div class="time">20:00</div>
                 <div class="desc">Prvý tanec a zábava</div>
             </div>
+            <div class="time-item">
+                <div class="time">00:00</div>
+                <div class="desc">Redový tanec / polnočný program</div>
+            </div>
         </div>
-        <p class="note">Presný program ešte upresníme, sledujte prosím túto stránku.</p>
+        <p class="note">Časy sú orientačné, počas dňa ich budeme priebežne usmerňovať.</p>
     </section>
 
+    <!-- MIESTO -->
     <section id="miesto" class="section section-alt">
         <h2>Miesto</h2>
         <div class="grid-2">
             <div>
                 <h3>Obrad</h3>
-                <p><strong>Reformovaný kostol Tušice</strong></p>
-                <p>Tušice, Slovensko</p>
-                <p><a href="https://maps.google.com" target="_blank" rel="noopener">Zobraziť na mape</a></p>
+                <p><strong>Saleziáni, Michalovce</strong></p>
+                <p>Michalovce</p>
+                <p>
+                    <a href="https://share.google/n9sV3WQHadYKnVEkj" target="_blank" rel="noopener">
+                        Zobraziť na mape
+                    </a>
+                </p>
 
                 <h3>Hostina</h3>
-                <p><strong>(doplníme názov sály / reštaurácie)</strong></p>
-                <p><a href="#" target="_blank" rel="noopener">Zobraziť na mape</a></p>
+                <p><strong>Hotel Glamour</strong></p>
+                <p>Zemplínska Šírava</p>
+                <p>
+                    <a href="https://share.google/MDQEkgBT4NzovZ63e" target="_blank" rel="noopener">
+                        Zobraziť na mape
+                    </a>
+                </p>
             </div>
+
             <div>
                 <h3>Doprava a parkovanie</h3>
                 <ul>
-                    <li>Parkovanie pri kostole: (doplníme informácie).</li>
-                    <li>Parkovanie pri sále: (doplníme parkovisko / možnosti).</li>
-                    <li>Prípadný svadobný autobus: čas a miesto odchodu.</li>
+                    <li>Parkovanie pri kostole: dostupné pozdĺž ulice + malé parkovisko pri areáli.</li>
+                    <li>Parkovanie pri hoteli Glamour: vlastné parkovisko pri hoteli (zdarma).</li>
+                    <li>Svadobný autobus: informácie doplníme neskôr (ak bude zabezpečený).</li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- RSVP -->
     <section id="rsvp" class="section">
         <h2>Potvrdenie účasti (RSVP)</h2>
         <p>
-            Prosíme, vyplňte formulár najneskôr do <strong>31. júla 2025</strong>.
+            Prosíme, dajte nám vedieť, či sa svadby zúčastníte,
+            najneskôr do <strong>31. mája 2026</strong>.
+        </p>
+        <p>
+            Vyplnenie formulára nám veľmi pomôže pri plánovaní občerstvenia, sedenia a dopravy.
         </p>
 
         <div class="rsvp-embed">
@@ -133,62 +159,74 @@
         </div>
     </section>
 
+    <!-- DARČEKY -->
     <section id="darceky" class="section section-alt">
         <h2>Darčeky</h2>
         <p>
-            Vaša prítomnosť je pre nás najväčším darom.
+            Vaša prítomnosť je pre nás najväčším darom.  
             Ak by ste nás chceli potešiť aj inak, budeme vďační za
-            <strong>finančný príspevok</strong> na spoločné bývanie a budúce plány.
+            <strong>finančný príspevok</strong> na spoločné bývanie a spoločný život.
         </p>
         <p>
-            Bankový účet: <strong>SK00 0000 0000 0000 0000 0000</strong><br>
-            Do poznámky môžete uviesť napr. „svadba Lukáš &amp; Danielka“.
+            Bankový účet:
+            <strong>SK00 0000 0000 0000 0000 0000</strong><br>
+            Do poznámky uveďte prosím:
+            <strong>„svadba Lukáš &amp; Danielka“</strong>.
         </p>
     </section>
 
+    <!-- INFO -->
     <section id="info" class="section">
         <h2>Praktické informácie</h2>
         <div class="grid-2">
             <div>
                 <h3>Oblečenie</h3>
-                <p>Prosíme o spoločenské oblečenie. Dámy šaty, páni oblek alebo košeľa s nohavicami.</p>
+                <p>
+                    Prosíme o spoločenské oblečenie.
+                    Dámy – šaty alebo kostým, páni – oblek alebo košeľa s nohavicami.
+                </p>
             </div>
             <div>
                 <h3>Deti</h3>
-                <p>(Sem dopíšte, či sú deti vítané / prípadne prosba bez detí.)</p>
+                <p>
+                    Deti sú vítané / alebo sem doplníme finálnu informáciu podľa dohody.
+                </p>
             </div>
             <div>
                 <h3>Fotenie</h3>
                 <p>
-                    Fotograf bude prítomný celý deň. Prosíme počas obradu
-                    nefotiť mobilmi, aby sme si chvíľu užili naplno.
+                    Fotograf bude prítomný celý deň.
+                    Počas obradu prosíme nefotiť mobilom – radi sa s vami podelíme o fotky.
                 </p>
             </div>
             <div>
                 <h3>Ubytovanie</h3>
-                <p>(Ak budú odporúčané hotely/penzióny, môžeme sem doplniť prehľad.)</p>
+                <p>
+                    Ak budete potrebovať prespať, odporúčame využiť ubytovanie v okolí
+                    Zemplínskej Šíravy alebo priamo v hoteli Glamour.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- KONTAKTY -->
     <section id="kontakt" class="section section-alt">
         <h2>Kontakty</h2>
-        <p>Ak máte otázky ohľadom organizácie, prosíme kontaktujte:</p>
+        <p>V prípade otázok sa môžete obrátiť na:</p>
         <ul>
-            <li>Svedok: <strong>(meno)</strong> – tel.: <strong>+421 xxx xxx xxx</strong></li>
-            <li>Svedkyňa: <strong>(meno)</strong> – tel.: <strong>+421 xxx xxx xxx</strong></li>
+            <li>Svedok: <strong>DOPLŇ MENO</strong>, tel.: <strong>+421 DOPLŇ</strong></li>
+            <li>Svedkyňa: <strong>DOPLŇ MENO</strong>, tel.: <strong>+421 DOPLŇ</strong></li>
         </ul>
         <p>
-            V prípade potreby sa môžete obrátiť aj na nás:<br>
-            Lukáš: +421 xxx xxx xxx<br>
-            Danielka: +421 xxx xxx xxx
+            Lukáš: <strong>+421 DOPLŇ</strong><br>
+            Danielka: <strong>+421 DOPLŇ</strong>
         </p>
     </section>
 
 </main>
 
 <footer class="footer">
-    &copy; 2025 Lukáš &amp; Danielka
+    &copy; 2026 Lukáš &amp; Danielka
 </footer>
 
 <!-- Skripty -->
