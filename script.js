@@ -44,3 +44,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+// Mobilné menu (hamburger)
+const navToggle = document.querySelector(".nav-toggle");
+const menu = document.querySelector(".menu");
+
+if (navToggle && menu) {
+    navToggle.addEventListener("click", () => {
+        menu.classList.toggle("menu-open");
+    });
+
+    // po kliknutí na link v menu menu zavrieme
+    menu.querySelectorAll("a[href^='#']").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("menu-open");
+        });
+    });
+}
+
