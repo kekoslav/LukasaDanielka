@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: #f7f4f1;
+    color: #333;
+}
+
+a {
+    color: #b27b5c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    min-height: 90vh;
+    background-image: url('https://images.pexels.com/photos/265779/pexels-photo-265779.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 1rem 4rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    max-width: 480px;
+}
+
+.date {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+}
+
+.countdown {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.countdown .unit {
+    text-align: center;
+}
+
+.countdown span {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    background-color: #f4e1d4;
+    color: #333;
+    font-size: 0.95rem;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #e9d3c2;
+}
+
+.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Sections */
+
+.section {
+    padding: 4rem 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.section-alt {
+    background-color: #f0ebe7;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Timeline */
+
+.timeline {
+    border-left: 2px solid #d6c3b4;
+    padding-left: 1.5rem;
+    margin: 0 auto 1.5rem;
+    max-width: 500px;
+}
+
+.time-item {
+    margin-bottom: 1.1rem;
+}
+
+.time {
+    font-weight: bold;
+    color: #b27b5c;
+}
+
+.note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Grid */
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+/* RSVP */
+
+.rsvp-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-row label {
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.6rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #d5c5b7;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-note {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    background-color: #e6ded7;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* pre jednoduchú verziu skryjeme menu na mobile */
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .countdown {
+        gap: 0.8rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .rsvp-form {
+        padding: 1.5rem;
+    }
+}
